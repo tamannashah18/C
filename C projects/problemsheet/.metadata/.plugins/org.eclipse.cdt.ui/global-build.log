@@ -1,0 +1,8 @@
+15:27:39 **** Incremental Build of configuration Debug for project p5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o p5.o ../p5.c 
+../p5.c: In function ‘main’:
+../p5.c:6:26: warning: variable ‘temp’ set but not used [-Wunused-but-set-variable]
+    6 |         int a[10],*p,i,j,temp;
+      |                          ^~~~
+gcc -o p5 p5.o 

@@ -1,0 +1,43 @@
+#include<stdio.h>
+struct dob
+{
+	int date;
+	int mon;
+	int yr;
+}d;
+int date();
+void main()
+{
+	printf("Enter date:");
+		scanf("%d",&d.date);
+
+		printf("Enter month:");
+		scanf("%d",&d.mon);
+
+		printf("Enter year:");
+		scanf("%d",&d.yr);
+}
+int date()
+{
+	if(d.date<=31 && d.date>0 && d.mon<=12 && d.mon>0 && d.yr>0 )
+		{
+					if(d.mon==2)
+					{
+						if(d.yr%4==0 && d.date>29)
+						{
+							printf("Invalid input");
+						}
+						else if(d.date>=29)
+						{
+							printf("Invalid input");
+						}
+					}
+					else if(d.mon==4 ||d.mon==6 ||d.mon==9 ||d.mon==11)
+					{
+						if(d.date>30)
+						{
+							printf("Invalid input");
+						}
+					}
+		}
+}

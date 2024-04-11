@@ -1,0 +1,27 @@
+#include<Stdio.h>
+void main()
+{
+	int n,result;
+	printf("Enter end no for fibonnaci series");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+	result=f(i);
+	printf("%d,",result);
+	}
+}
+int f(int n)
+{
+	if(n==0)
+	{
+		return 0;
+	}
+	else if(n==1)
+	{
+		return 1;
+	}
+	else
+	{
+		return f(n-1)+f(n-2);
+	}
+}

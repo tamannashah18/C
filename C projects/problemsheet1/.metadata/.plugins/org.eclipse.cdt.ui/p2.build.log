@@ -1,0 +1,18 @@
+09:46:02 **** Incremental Build of configuration Debug for project p2 ****
+make all 
+Building file: ../p2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"p2.d" -MT"p2.o" -o "p2.o" "../p2.c"
+../p2.c:9:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+    9 | void main()
+      |      ^~~~
+Finished building: ../p2.c
+ 
+Building target: p2
+Invoking: GCC C Linker
+gcc  -o "p2"  ./p2.o   
+Finished building target: p2
+ 
+
+09:46:02 Build Finished. 0 errors, 1 warnings. (took 165ms)
+

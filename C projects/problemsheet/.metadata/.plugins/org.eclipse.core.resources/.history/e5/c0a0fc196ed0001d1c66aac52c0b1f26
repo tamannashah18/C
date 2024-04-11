@@ -1,0 +1,18 @@
+//add using cmd
+#include<stdio.h>
+#include<stdlib.h>
+int main(int argc,char *argv[])
+{
+	FILE *f;
+	int i=2;
+	f=fopen(argv[1],"r");
+	while(!feof(f))
+	{
+		fscanf(f,"%s",argv[i]);
+		printf("%s\n",argv[i]);
+		i++;
+	}
+	fclose(f);
+}
+
+

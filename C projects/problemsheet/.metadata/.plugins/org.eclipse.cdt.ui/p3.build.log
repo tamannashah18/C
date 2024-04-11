@@ -1,0 +1,13 @@
+14:56:46 **** Incremental Build of configuration Debug for project p3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o p3.o ../p3.c 
+../p3.c: In function ‘main’:
+../p3.c:24:41: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+   24 |         printf("THE FACTORIAL OF %d is %d:",f);
+      |                                        ~^
+      |                                         |
+      |                                         int
+gcc -o p3 p3.o 
+
+14:56:46 Build Finished. 0 errors, 1 warnings. (took 347ms)
+

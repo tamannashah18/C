@@ -1,0 +1,25 @@
+#include<stdio.h>
+struct times
+{
+	int sec;
+	int hour;
+	int min;
+}t;
+void input()
+{
+	printf("Enter Hours");
+	scanf("%d",&t.hour);
+	printf("Enter Minutes");
+	scanf("%d",&t.min);
+	printf("Enter Seconds");
+	scanf("%d",&t.sec);
+}
+void display()
+{
+	printf("HOURS:%d\nMINUTES:%d\nSECONDS:%d\n",t.hour,t.min,t.sec);
+}
+void validate();
+int main()
+{
+
+}

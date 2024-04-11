@@ -1,0 +1,94 @@
+
+#include<stdio.h>
+void main()
+{
+	int m,n,a[100],i,b[100];
+	printf("Enter size of array 1");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("Enter element %d:",i+1);
+		scanf("%d",&a[i]);
+	}
+	printf("Enter size of array 2");
+	scanf("%d",&m);
+	for(i=0;i<m;i++)
+	{
+		printf("Enter element %d:",i+1);
+		scanf("%d",&b[i]);
+	}
+	sort(n,m,a,b);
+}
+void sort(int n,int m, int a[],int b[])
+{
+	int i,j,temp;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n-i-1;j++)
+		{
+			if(a[j]>a[j+1])
+			{
+				temp=a[j];
+				a[j]=a[j+1];
+				a[j+1]=temp;
+			}
+		}
+	}
+	for(i=0;i<m;i++)
+		{
+			for(j=0;j<m-i-1;j++)
+			{
+				if(b[j]>b[j+1])
+				{
+					temp=b[j];
+					b[j]=b[j+1];
+					b[j+1]=temp;
+				}
+			}
+		}
+	printf("Sorted array 1:\n");
+	for(i=0;i<n;i++)
+	{
+		printf("%d ",a[i]);
+	}
+	printf("\nSorted array 2:\n");
+		for(i=0;i<m;i++)
+		{
+			printf("%d ",b[i]);
+		}
+		merge(n,m,a,b);
+}
+void merge(int n,int m,int a[10],int b[10])
+{
+	int i,j=0,temp;
+	for(i=0;i<n+m;i++)
+	{
+		if(i>=n)
+		{
+			a[i]=b[j];
+			j++;
+		}
+	}
+	printf("\nMerged array :\n");
+		for(i=0;i<n+m;i++)
+		{
+			printf("%d ",a[i]);
+		}
+		for(i=0;i<n+m;i++)
+			{
+				for(j=0;j<n+m-i-1;j++)
+				{
+					if(a[j]>a[j+1])
+					{
+						temp=a[j];
+						a[j]=a[j+1];
+						a[j+1]=temp;
+					}
+				}
+			}
+		printf("\nMerged & sorted array :\n");
+				for(i=0;i<n+m;i++)
+				{
+					printf("%d ",a[i]);
+				}
+}

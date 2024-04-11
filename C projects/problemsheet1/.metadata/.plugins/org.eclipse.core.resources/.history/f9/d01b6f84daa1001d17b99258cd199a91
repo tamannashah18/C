@@ -1,0 +1,111 @@
+#include<stdio.h>
+struct times
+{
+	int sec;
+	int hour;
+	int min;
+}t;
+void input()
+{
+	printf("Enter Hours");
+	scanf("%d",&t.hour);
+	printf("Enter Minutes");
+	scanf("%d",&t.min);
+	printf("Enter Seconds");
+	scanf("%d",&t.sec);
+	int ch;
+		printf("Enter 1 for input\n Enter 2 for Displaying entered time \nEnter 3 for validating time \n Enter 4 to quit");
+		scanf("%d",&ch);
+		switch(ch)
+		{
+		case 1:
+			input();
+			break;
+		case 2:
+			display();
+			break;
+		case 3:
+				valid();
+				break;
+		case 4:
+					quit();
+					break;
+		default:
+			printf("Invalid input");
+			break;
+}
+void display()
+{
+	printf("HOURS:%d\nMINUTES:%d\nSECONDS:%d\n",t.hour,t.min,t.sec);
+	int ch;
+		printf("Enter 1 for input\n Enter 2 for Displaying entered time \nEnter 3 for validating time \n Enter 4 to quit");
+		scanf("%d",&ch);
+		switch(ch)
+		{
+		case 1:
+			input();
+			break;
+		case 2:
+			display();
+			break;
+		case 3:
+				valid();
+				break;
+		case 4:
+					quit();
+					break;
+		default:
+			printf("Invalid input");
+			break;
+}
+void valid()
+{
+	if(t.hour>0&&t.hour<=24&& t.min>0 && t.min<59 && t.sec>0 && t.sec<59)
+		printf("Valid time");
+	else
+		printf("Invalid time");
+	int ch;
+		printf("Enter 1 for input\n Enter 2 for Displaying entered time \nEnter 3 for validating time \n Enter 4 to quit");
+		scanf("%d",&ch);
+		switch(ch)
+		{
+		case 1:
+			input();
+			break;
+		case 2:
+			display();
+			break;
+		case 3:
+				valid();
+				break;
+		case 4:
+			quit();
+			break;
+		default:
+			printf("Invalid input");
+			break;
+}
+int main()
+{
+	int ch;
+	printf("Enter 1 for input\n Enter 2 for Displaying entered time \nEnter 3 for validating time \n Enter 4 to quit");
+	scanf("%d",&ch);
+	switch(ch)
+	{
+	case 1:
+		input();
+		break;
+	case 2:
+		display();
+		break;
+	case 3:
+			valid();
+			break;
+	case 4:
+				quit();
+				break;
+	default:
+		printf("Invalid input");
+		break;
+	}
+}

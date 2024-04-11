@@ -1,0 +1,28 @@
+struct dates
+{
+	int date;
+	int mon;
+	int yr;
+}d;
+int date();
+void main()
+{
+	int validity;
+		printf("Enter date:");
+		scanf("%d",&d.date);
+
+		printf("Enter month:");
+		scanf("%d",&d.mon);
+
+		printf("Enter year:");
+		scanf("%d",&d.yr);
+		validity=date(d);
+		if(validity==0)
+		{
+			printf("Equal Date");
+		}
+		else
+		{
+			printf("Unequal date");
+		}
+}
